@@ -13,8 +13,7 @@ public class Juego{
         Tablero tablero = new Tablero(TAMANO, Simbolo_Jugador_1, Simbolo_Jugador_2);
 
         // Jugar el juego Conecta 4
-        System.out.println("¡Bienvenido al juego Conecta 4!");
-        System.out.println("Para jugar, ingresa la columna donde deseas colocar tu ficha (0-5).");
+        System.out.println("Para jugar, ingresa la columna donde deseas colocar tu ficha");
 
         tablero.imprimirMatriz();
         while (true) {

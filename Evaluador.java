@@ -24,6 +24,8 @@ public class Evaluador {
                     {1, -1}  // Diagonal inversa
             };
 
+
+
             for (int fil = 0; fil < tablero.length; fil++) {
                 for (int col = 0; col < tablero[0].length; col++) {
                     for (int[] dir : direcciones) {
