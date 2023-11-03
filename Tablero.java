@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
 public class Tablero {
-    private int TAMANO;
-    private char Simbolo_Jugador_1;
-    private char Simbolo_Jugador_2;
-    private boolean Turno1;
+    private int tamano;
+    private char simbolo_Jugador_1;
+    private char simbolo_Jugador_2;
+    private boolean turno1;
     private char[][] matriz;
     private int[] cantidadFichas;
     private Scanner lector;
 
     public Tablero(int tamano, char simboloJugador1, char simboloJugador2) {
-        this.TAMANO = tamano;
-        this.Simbolo_Jugador_1 = simboloJugador1;
-        this.Simbolo_Jugador_2 = simboloJugador2;
-        this.Turno1 = true;
-        this.matriz = new char[TAMANO][TAMANO];
-        this.cantidadFichas = new int[TAMANO];
+        this.tamano = tamano;
+        this.simbolo_Jugador_1 = simboloJugador1;
+        this.simbolo_Jugador_2 = simboloJugador2;
+        this.turno1 = true;
+        this.matriz = new char[tamano][tamano];
+        this.cantidadFichas = new int[tamano];
         this.lector = new Scanner(System.in);
     }
 
@@ -29,16 +29,36 @@ public class Tablero {
     }
 
     public void jugar() {
-        char simbolo = Turno1 ? Simbolo_Jugador_1 : Simbolo_Jugador_2;
+        char simbolo = turno1 ? simbolo_Jugador_1 : simbolo_Jugador_2;
         System.out.println("Ingresa tu posición");
         int x = lector.nextInt();
-        int y = TAMANO - 1 - cantidadFichas[x];
+        int y = tamano - 1 - cantidadFichas[x];
         cantidadFichas[x] += 1;
         matriz[y][x] = simbolo;
-        Turno1 = !Turno1;
+        turno1 = !turno1;
     }
 
     public char[][] getMatriz() {
         return matriz;
+    }
+
+    public int getTamano() {
+        return tamano;
+    }
+
+    public char getSimbolo_Jugador_1() {
+        return simbolo_Jugador_1;
+    }
+
+    public char getSimbolo_Jugador_2() {
+        return simbolo_Jugador_2;
+    }
+
+    public boolean getTurno1() {
+        return turno1;
+    }
+
+    public void setTurno1(boolean turno1) {
+        turno1 = turno1;
     }
 }

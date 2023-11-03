@@ -1,5 +1,5 @@
 public class Evaluador {
-        public static boolean VerificarDireccion(char[][] tablero, char jugador, int fil, int col, int filDir, int colDir) {
+        public static boolean verificarDireccion(char[][] tablero, char jugador, int fil, int col, int filDir, int colDir) {
             int count = 0;
 
             for (int i = fil, j = col; i >= 0 && i < tablero.length && j >= 0 && j < tablero[0].length; i += filDir, j += colDir) {
@@ -29,7 +29,7 @@ public class Evaluador {
             for (int fil = 0; fil < tablero.length; fil++) {
                 for (int col = 0; col < tablero[0].length; col++) {
                     for (int[] dir : direcciones) {
-                        if (VerificarDireccion(tablero, jugador, fil, col, dir[0], dir[1])) {
+                        if (verificarDireccion(tablero, jugador, fil, col, dir[0], dir[1])) {
                             return true; // El jugador ha ganado en esta dirección
                         }
                     }
