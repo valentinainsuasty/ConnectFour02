@@ -1,4 +1,20 @@
+/**
+ * clase Evaluador
+ */
 public class Evaluador {
+    /**
+     * Constructor para inicializar los atributos
+     *
+     * @param tablero
+     * @param jugador
+     * @param fil
+     * @param col
+     * @param filDir
+     * @param colDir
+     * @return
+     *
+     * Complejidad temporal: 0(N) tiempo lineal
+     */
         public static boolean verificarDireccion(char[][] tablero, char jugador, int fil, int col, int filDir, int colDir) {
             int count = 0;
 
@@ -16,6 +32,15 @@ public class Evaluador {
             return false; // No se encontró una secuencia ganadora en esta dirección
         }
 
+    /**
+     * Metodo que indica ganador
+     *
+     * @param tablero
+     * @param jugador
+     * @return
+     *
+     * Complejidad temporal: 0(N^3) tiempo cubico
+     */
         public static boolean ganador(char[][] tablero, char jugador) {
             int[][] direcciones = {
                     {0, 1},  // Horizontal

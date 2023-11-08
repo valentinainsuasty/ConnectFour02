@@ -1,7 +1,16 @@
 import java.util.Scanner;
 
+/**
+ * clase Juego
+ */
 public class Juego{
-
+    /**
+     * Primera clase que se ejecuta
+     *
+     * @param args
+     *
+     * Complejidad temporal: 0(1) timepo constante
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
