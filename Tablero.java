@@ -109,4 +109,22 @@ public class Tablero {
     public void setTurno1(boolean turno1) {
         turno1 = turno1;
     }
+
+    /**
+     * Metodo que permite cambiar la matriz
+     * @param matriz
+     */
+    public void setMatriz(char[][] matriz) {
+        this.matriz = matriz;
+    }
+
+    /**
+     * Metodo que permite cambiar el tamaño del tablero
+     * @param tamano
+     */
+    public void setTamano(int tamano) {
+        this.tamano = tamano;
+    }
+
+
 }
